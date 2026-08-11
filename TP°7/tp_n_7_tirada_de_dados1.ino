@@ -80,7 +80,7 @@ void apagarTodos()
 void victoria()
 {
   Serial.println("================================");
-  Serial.println(" GANASTE!!!");
+  Serial.println(" E compa sos el ganador");
   Serial.println("================================");
 
   
@@ -136,7 +136,7 @@ void loop()
   if (estadoAnterior == HIGH && estadoBoton == LOW)
   {
     Serial.println();
-    Serial.println("TIRANDO LOS DADOS...");
+    Serial.println("TIRANDO");
 
     for (int i = 0; i < 10; i++)
     {
@@ -173,11 +173,17 @@ void loop()
     }
     else
     {
-      Serial.println("No ganaste. Intenta nuevamente.");
+      Serial.println("Perdite compa.");
     }
 
     Serial.println();
-    Serial.println("Presiona nuevamente el boton.");
+    Serial.println("Apreta el boton para volver a intentarlo.");
+
+    delay(300);
+  }
+
+  estadoAnterior = estadoBoton;
+}
 
     delay(300);
   }
